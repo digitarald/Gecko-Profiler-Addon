@@ -1,21 +1,24 @@
 {
-    "description": "Provide advanced profiling results integrating both the Javascript and C++ (platform) execution. Focus in on the cause of slow events causing the browser to be unresponsive and share the profiles with others. Ideal for both platform or Web development. For all the profiling features use a Nightly firefox build.", 
-    "license": "MPL2", 
-    "author": "Benoit Girard <bgirard@mozilla.com>", 
-    "url": "https://github.com/bgirard/Gecko-Profiler-Addon", 
-    "version": "1.15.3",
-    "dependencies": [
-      "addon-kit",
-      "api-utils",
-      "pathfinder"
-    ], 
-    "comment_preferences": [{
-        "name": "somePreference",
-        "title": "Some preference title",
-        "type": "string",
-        "value": "this is the default string value"
-    }],
-    "name": "geckoprofiler",
-    "fullName": "Gecko Profiler", 
-    "id": "jid0-edalmuivkozlouyij0lpdx548bc"
+  "title": "Platform Profiler Recorder",
+  "name": "platform-profiler-recorder",
+  "version": "0.0.1",
+  "description": "Collect platform profiles.",
+  "main": "index.js",
+  "author": "Markus Stange <mstange@themasta.com>",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ],
+  "preferences": [
+    {
+      "name": "reportUrl",
+      "title": "Reporter URL",
+      "description": "Collected profiles get posted to this URL",
+      "type": "string",
+      "value": "http://localhost:4242/"
+    }
+  ]
 }
