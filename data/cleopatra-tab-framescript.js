@@ -1,7 +1,7 @@
-let gProfile = null;
+let data = null;
 
 addMessageListener("Cleopatra:Init", e => {
-  gProfile = e.data;
+  data = e.data;
   connectToPage();
   addEventListener("DOMContentLoaded", connectToPage);
 });
@@ -10,7 +10,7 @@ function connectToPage() {
   const unsafeWindow = content.wrappedJSObject;
   if (unsafeWindow.connectToGeckoProfiler) {
     unsafeWindow.connectToGeckoProfiler(makeAccessibleToPage({
-      getProfile: () => Promise.resolve(gProfile),
+      getProfile: () => Promise.resolve(data),
       getSymbolTable: (pdbName, breakpadId) => getSymbolTable(pdbName, breakpadId),
     }, unsafeWindow));
   }

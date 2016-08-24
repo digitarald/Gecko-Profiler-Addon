@@ -1,8 +1,8 @@
 {
-  "title": "Gecko Profiler",
-  "name": "gecko-profiler",
+  "title": "Platform Profiler Recorder",
+  "name": "platform-profiler-recorder",
   "version": "0.0.1",
-  "description": "Collect platform profiles from Firefox Desktop, Firefox for Android and Firefox OS.",
+  "description": "Collect platform profiles.",
   "main": "index.js",
   "author": "Markus Stange <mstange@themasta.com>",
   "engines": {
@@ -12,11 +12,13 @@
   "keywords": [
     "jetpack"
   ],
-  "preferences": [{
-    "name": "reportUrl",
-    "title": "Reporter URL",
-    "description": "Collected profiles get posted to this URL",
-    "type": "string",
-    "value": "http://localhost:4242/"
-  }]
+  "preferences": [
+    {
+      "name": "reportUrl",
+      "title": "Reporter URL",
+      "description": "Collected profiles get posted to this URL",
+      "type": "string",
+      "value": "http://localhost:4242/"
+    }
+  ]
 }

@@ -1,2 +1,4 @@
 
 sdk/
+*.xpi
+.profile
